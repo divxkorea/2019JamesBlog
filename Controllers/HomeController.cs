@@ -1,42 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Dapper;
+using Microsoft.Data.SqlClient;
+using System.Data;
+using Microsoft.Extensions.Configuration;
 using JamesBlog.Models;
 
 namespace JamesBlog.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private ILogger<HomeController> _logger;
+        private readonly IConfiguration _config;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IConfiguration config)
         {
             _logger = logger;
+            _config = config;
         }
-
         public IActionResult Index()
         {
-            return View();
+            List<Member> member = new List<Member>();
+            GetMemberList(out member);
+            return View(member);
         }
 
-        public IActionResult Privacy()
+        private int GetMemberList(out List<Member> objMemberList)
         {
-            return View();
+            int intRetVal = 0;
+            string strErrMsg = string.Empty;
+
+            try
+            {
+                using (IDbConnection  conn = Connection)
+                {
+                    string sQuery = "SELECT userno, userid FROM TMemberMst";
+                    conn.Open();
+
+                    var result = conn.Query<Member>(sQuery);
+                    objMemberList = result.ToList();
+
+                    //var result = await conn.QueryAsync<Employee>(sQuery, new { DateOfBirth = dateOfBirth });
+                    //return result.ToList();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return intRetVal;
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IDbConnection Connection
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public IActionResult Index2()
-        {
-            return Content("Welcome to .Net Core 3.0");
+            get
+            {
+                return new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            }
         }
     }
 }

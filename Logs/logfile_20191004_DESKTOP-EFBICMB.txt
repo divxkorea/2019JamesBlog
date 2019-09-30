@@ -1,0 +1,16 @@
+2019-10-04 22:43:42.4873 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 22:43:42.8255 [TID=8][::1][DEBUG] 로그정보=NLog injected into HomeController&예외유형=&예외메시지=&Trace=
+2019-10-04 22:43:42.8377 [TID=8][::1][INFO] 로그정보=Hello, this is the index!&예외유형=&예외메시지=&Trace=
+2019-10-04 22:53:12.3932 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:02:02.2730 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:02:11.0124 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:02:56.9843 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:13:33.6024 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:34:19.6352 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:44:10.2660 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:44:16.4358 [TID=4][::1][ERROR] 로그정보=An unhandled exception has occurred while executing the request.&예외유형=System.InvalidOperationException&예외메시지=RenderBody invocation in '/Views/Admin/Index.cshtml' is invalid. RenderBody can only be called from a layout page.&Trace=
+2019-10-04 23:44:30.9329 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:44:31.2997 [TID=8][::1][ERROR] 로그정보=An unhandled exception has occurred while executing the request.&예외유형=System.InvalidOperationException&예외메시지=RenderBody invocation in '/Views/Admin/Index.cshtml' is invalid. RenderBody can only be called from a layout page.&Trace=
+2019-10-04 23:45:21.7567 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
+2019-10-04 23:45:28.7987 [TID=4][::1][ERROR] 로그정보=An unhandled exception has occurred while executing the request.&예외유형=System.InvalidOperationException&예외메시지=RenderBody invocation in '/Views/Admin/Index.cshtml' is invalid. RenderBody can only be called from a layout page.&Trace=
+2019-10-04 23:47:07.1472 [TID=1][][DEBUG] 로그정보=init main&예외유형=&예외메시지=&Trace=
