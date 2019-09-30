@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive blog template">
+    <meta name="author" content="Zoyothemes">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <title>James Blog Project</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MENU CSS -->
+    <link href="/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- MATERIALDESIGN ICON -->
+    <link rel="stylesheet" type="text/css" href="/css/materialdesignicons.min.css">
+
+    <!-- CUSTOM STYLESHEET -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/default.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar-mobile">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="" class="" style="height: 44px;"></a>
+                <button class="button-menu-mobile">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <div class="logo">
+                    <a href="/"><img src="images/logo.png" alt="" class="" style="height: 44px;"></a>
+                    <p class="text-muted">James Blog 방문을 환영합니다.</p>
+                </div>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="/"><span> Home</span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);"><span> About Me </span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);"><span> Travel </span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);"><span> Music </span></a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="copyright-box">
+                        <p>2019 © James. </p>
+                    </div>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <div class="page-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/metisMenu.min.js"></script>
+    <!--common script for all pages-->
+    <script src="/js/jquery.app.js"></script>
+</body>
+
+</html>
